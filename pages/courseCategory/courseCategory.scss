@@ -1,0 +1,375 @@
+// @font-face {
+//     font-family: 'courseCategory';
+//     src: url('https://www.eralab.cn/static/fonts/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+//   }
+.main {
+    ::-webkit-scrollbar {
+
+
+        display: none;
+        width: 0;
+        height: 0;
+        color: transparent;
+    }
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    .top {
+        position: relative;
+
+        .scroll-box {
+            white-space: nowrap;
+            height: 100vh;
+
+            .card-box {
+                display: inline-block;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    min-height: 100vh;
+                    width: 100vw;
+                    font-size: 80rpx;
+                    // background: linear-gradient(2deg, #fd8112, #0085ca);
+                    color: white;
+                    justify-content: space-between;
+                    padding-bottom: 10rpx;
+                    position: relative;
+                    image{
+                        display: block;
+                        
+                    }
+                    .card_bg{
+                        width: 100%;
+                        height: 100vh;
+                        position: absolute;
+                        // background-color: red;
+                        // font-family: 'courseCategory';
+                    }
+                    .card_top {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .course_intro {
+                            font-size: 32rpx;
+                            margin-top: 20rpx;
+                        }
+
+                        .toDetail {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            bottom: 80rpx;
+                            z-index: 10;
+                            .toDetail_button{
+                                // font-family: 'courseCategory';
+                                width: 300rpx;
+                                height: 80rpx;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #e5ec16;
+                                color: #283742;
+                                border-radius: 50rpx;
+                                font-size: 40rpx;
+                            }
+                        }
+                    }
+
+                    .card_bottom {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .iconfont {
+                            font-size: 64rpx;
+                            color: #eeeeee;
+                        }
+
+                        animation: tobottom 2s infinite linear;
+                    }
+
+                    @keyframes tobottom {
+                        0% {
+                            transform: translateY(0);
+                        }
+
+                        50% {
+                            transform: translateY(10rpx);
+                        }
+
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .top_title {
+            position: absolute;
+            width: 100%;
+            top: 160rpx;
+            left: 0;
+            display: flex;
+            justify-content: space-evenly;
+            color: rgb(235, 230, 230);
+            height: 50rpx;
+            box-sizing: border-box;
+            font-size: 32rpx;
+
+            .top_title_item {
+                min-height: 60rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //   background-color: red;
+            }
+
+            .top_title_active {
+                color: white;
+                border-bottom: 2rpx solid white;
+            }
+        }
+
+        .top_title_fixed {
+            position: fixed;
+            height: 100rpx;
+            top: 0;
+            left: 0;
+            color: black;
+            z-index: 99;
+            background-color: white;
+            margin: 0;
+            animation: show 0.5s linear;
+
+            .top_title_active {
+                color: #005826;
+                font-weight: bold;
+
+                text {
+                    padding-bottom: 2rpx;
+                    border-bottom: 4rpx solid #005826;
+                }
+
+            }
+
+        }
+
+        @keyframes show {
+            0% {
+                opacity: 0;
+                transform: translateY(-20rpx);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+    .content {
+        flex: 1;
+        background-color: white;
+        box-sizing: border-box;
+        padding-top: 40rpx;
+        overflow: scroll;
+        min-height: 100vh;
+        // background: linear-gradient(to right, #25bcbb, #46e994);
+
+        .content_top {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 30rpx 20rpx -20rpx #ccc;
+            margin-top: 20rpx;
+
+            .content_top_title {
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                justify-content: space-between;
+                background-color: #F8F8F8;
+
+                .content_top_tile_item {
+                    min-height: 60rpx;
+                    flex: 1;
+                    display: flex;
+                    font-size: 24rpx;
+                    color: #989898;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                .content_top_tile_item_active {
+                    color: #005826;
+                    font-weight: 800;
+
+                    text {
+                        border-bottom: 4rpx solid #005826;
+                    }
+                }
+            }
+
+            .content_top_content {
+                display: flex;
+                justify-content: space-between;
+                font-size: 24rpx;
+                height: 70rpx;
+                align-items: center;
+                margin: 10rpx 0 10rpx 0;
+                padding: 0 40rpx;
+                .allType {
+                    color: #005826;
+                }
+
+                .allNum {
+                    color: #989898;
+                }
+            }
+        }
+
+        .content_top_active {
+            width: 100%;
+            position: fixed;
+            top: 80rpx;
+            margin: 0;
+            z-index: 99;
+            background-color: white;
+            animation: show1 0.5s linear;
+        }
+
+        @keyframes show1 {
+            0% {
+                opacity: 0;
+                transform: translateY(-20rpx);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content_center {
+            display: flex;
+            flex-direction: column;
+           
+            .content_item_content {
+                background-color: white;
+                box-shadow: 0 0 30rpx #ccc;
+                box-sizing: border-box;
+                position: relative;
+                .content_item_content_bg{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 0;
+                    box-sizing: border-box;
+                    image{
+                        width: 100%;
+                    }
+                }
+                .content_item_content_top {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    height: 240rpx;
+                    z-index: 2;
+                    image {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 1;
+                    }
+
+                    .content_item_content_top_title {
+                        position: absolute;
+                        left: 20rpx;
+                        z-index: 2;
+                        color: #6d6d6d;
+
+                        text {
+                            height: 100%;
+                            font-size: 24rpx;
+                            background-color: white;
+                            padding: 0 20rpx;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .content_item_content_top_content {
+                        position: absolute;
+                        z-index: 2;
+                        top: 40rpx;
+                        left: 40rpx;
+                        color: white;
+                        // color: black;
+                        font-size: 32rpx;
+                        font-weight: bold;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .content_item_content_top_bottom {
+                        position: absolute;
+                        z-index: 2;
+                        top: 140rpx;
+                        left: 40rpx;
+                        display: flex;
+                        font-size: 24rpx;
+                        color: white;
+                        flex-direction: column;
+
+                        .iconfont {
+                            margin-right: 10rpx;
+
+                        }
+                    }
+
+                }
+
+                .content_item_content_bottom {
+                    padding: 20rpx 30rpx;
+                    box-sizing: border-box;
+                    font-size: 28rpx;
+                    position: relative;
+                    z-index: 2;
+                    .content_item_content_bottom_content {
+                        font-size: 24rpx;
+                        width: 100%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .content_fixed {
+        padding-top: 175rpx;
+    }
+}

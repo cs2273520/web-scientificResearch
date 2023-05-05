@@ -1,0 +1,44 @@
+<view class="customerService"  >
+        <view class="center" bindtap="clickCustomer" wx:if="{{clickcustomer!=true}}">
+            客服
+        </view>
+        <view class="center  {{clickcustomer==true?'center_active':''}}" bindtap="clickCustomer" wx:if="{{clickcustomer==true}}">
+            x
+        </view>
+        <view class="menu {{clickcustomer==true?'menu_active':''}} {{clickcustomer==false?'menu_unactive':''}}">
+        <ul>
+            <li>
+                <!-- <a href=""></a> -->
+            </li>
+            <li>
+                <!-- <a href=""></a> -->
+            </li>
+            <li>
+                <!-- <a href=""></a> -->
+            </li>
+            <li>
+                <!-- <a href=""></a> -->
+            </li>
+            <li>
+            <view class="iconfont icon-weixin" bindtap="toWechat">
+                
+            </view>
+               
+            </li>
+            <li>
+                <view class="iconfont icon-kefu">
+                
+            </view>
+            </li>
+            <li>
+                <view class="iconfont icon-dianhuajianpan" bindtap="toCallPhone">
+                
+            </view>
+            </li>
+            <li>
+                <!-- <a href=""></a> -->
+            </li>
+        </ul>
+        <view class="point {{showPoint==true?'point_active':''}} {{showPoint==false?'point_unactive':''}}" wx:if="{{showPoint!=null}}"></view>
+    </view>
+    </view>

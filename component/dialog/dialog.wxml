@@ -1,0 +1,15 @@
+
+  <view class="full" wx:if="{{showMask}}">
+    <view class="dialog {{showMask?'dialogShow':''}}">
+      <view class="dialog_title">
+          {{dialogTitle}}
+      </view>
+      <view class="dialog_content">
+          {{dialogContent}}
+      </view>
+      <view class="dialog_button">
+            <button bindtap="calcel">取消</button>
+            <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="confirm" class="loginButton">去登录</button>
+      </view>
+  </view> 
+  </view>

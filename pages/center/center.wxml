@@ -1,0 +1,51 @@
+<view class="main">
+    <view class="top">
+        <view class="iconfont icon-wode">
+            
+        </view>
+        <view class="Login" wx:if="{{!isLogin}}">
+            <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="loginButton">点击登录</button>
+        </view>
+        <view class="Login" wx:if="{{isLogin}}">
+           <text>微信用户  </text> 
+           <text class="logOut" bindtap="logout">退出</text>
+        </view>
+    </view>
+    <view class="recommend">
+        <view class="recommend_item">
+            <view>
+                推荐有奖
+            </view>
+            <view class="iconfont icon-xiangyou1">
+                
+            </view>
+        </view>
+        <view class="recommend_item">
+            <view>
+                我的推荐
+            </view>
+            <view class="iconfont icon-xiangyou1">
+                
+            </view>
+        </view>
+    </view>
+    <view class="service">
+        <view>
+            在线客服
+        </view>
+        <view>
+           周一至周五 10:00-20:00
+        </view>
+    </view>
+    <!-- <view class="match">
+        <view class="match_top">
+            
+        </view>
+        <view class="match_content">
+        <view>
+            匹配我的专属顾问
+        </view>
+      
+        </view>
+    </view> -->
+</view>

@@ -1,0 +1,446 @@
+@charset "UTF-8";
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-bottom: 100rpx;
+}
+
+.main .top {
+  width: 100%;
+}
+
+.main .top image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.main .courseIntroduction {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx 30rpx 10rpx 30rpx;
+  background-color: white;
+}
+
+.main .courseIntroduction .courseIntroduction_title {
+  font-size: 40rpx;
+  color: #666465;
+}
+
+.main .courseIntroduction .courseIntroduction_share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ccc;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #18a481;
+  font-size: 28rpx;
+}
+
+.main .courseIntroduction .courseIntroduction_share .courseIntroduction_share_button {
+  display: flex;
+  position: relative;
+}
+
+.main .courseIntroduction .courseIntroduction_share .courseIntroduction_share_button .share {
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+.main .courseIntroduction .courseIntroduction_share .courseIntroduction_share_button .share .iconfont {
+  font-size: 24rpx;
+}
+
+.main .courseIntroduction .courseIntroduction_content {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.main .courseIntroduction .courseIntroduction_content .courseIntroduction_content_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .courseIntroduction .courseIntroduction_content .courseIntroduction_content_item .iconfont {
+  font-size: 100rpx;
+  margin: 20rpx 0;
+}
+
+.main .courseIntroduction .courseIntroduction_content .courseIntroduction_content_item text:nth-of-type(1) {
+  color: #059d77;
+  font-weight: bold;
+}
+
+.main .courseIntroduction .courseIntroduction_content .courseIntroduction_content_item text:nth-of-type(2) {
+  font-size: 28rpx;
+  display: flex;
+}
+
+.main .content .content_item {
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx 0;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .content_item_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 36rpx;
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.main .content .content_item .content_item_title .content_item_title_leftline {
+  width: 30%;
+  height: 6rpx;
+  background: linear-gradient(to right, rgba(5, 157, 119, 0), #059d77);
+  position: absolute;
+  left: 0;
+}
+
+.main .content .content_item .content_item_title .content_item_title_rightline {
+  width: 30%;
+  height: 6rpx;
+  background: linear-gradient(to right, #059d77, rgba(5, 157, 119, 0));
+  position: absolute;
+  right: 0;
+}
+
+.main .content .content_item .content_item_swiper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 30rpx;
+  background-color: #ccf8ea;
+  margin: 0 30rpx;
+  border-radius: 30rpx;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .top {
+  line-height: 60rpx;
+  overflow: hidden;
+  /* 超出部分隐藏 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* 显示行数 */
+  -webkit-box-orient: vertical;
+  /* 竖向排列 */
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .top_active {
+  line-height: 60rpx;
+  -webkit-line-clamp: 9999;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .showMore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40rpx 0;
+  color: #1f0942;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer .offers_swiper {
+  width: 100%;
+  height: 600rpx;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer .offer_item {
+  width: 100%;
+  height: 100%;
+  background-color: #85edc5;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40rpx;
+  margin: 0 20rpx;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer .offer_item .image {
+  width: 100%;
+  flex: 8;
+  background-color: white;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer .offer_item .image image {
+  width: 100%;
+  height: 100%;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .offer .offer_item .offer_intro {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 70rpx;
+}
+
+.main .content .content_item .content_item_swiper .experience .experience_content .head image {
+  position: absolute;
+  top: 0rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background-color: #edfcf7;
+}
+
+.main .content .content_item .content_item_swiper_active {
+  min-height: 120vh;
+}
+
+.main .content .content_item .showIntro {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main .content .content_item .content_item_content {
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.main .content .content_item .content_item_content_active {
+  line-height: 60rpx;
+  -webkit-line-clamp: 99999;
+}
+
+.main .content .content_item .teacher {
+  padding-left: 65rpx;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .teacher .content_item_content_item {
+  display: flex;
+  position: relative;
+  background-color: #53eabb;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .teacher .content_item_content_item .HeadPicture {
+  width: 200rpx;
+  height: 135rpx;
+  margin-left: -55rpx;
+  background-color: #EDFCF7;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.main .content .content_item .teacher .content_item_content_item .HeadPicture image {
+  width: 100%;
+  height: 100%;
+}
+
+.main .content .content_item .teacher .content_item_content_item .teacher_intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 70rpx;
+}
+
+.main .content .content_item .teacher .content_item_content_item .teacher_intro text:nth-of-type(1) {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.main .content .content_item .teacher .content_item_content_item .teacher_intro text:nth-of-type(2) {
+  font-size: 32rpx;
+}
+
+.main .content .content_item .teacher .content_item_content_item .research_intro {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .teacher .content_item_content_item .research_intro text:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.main .content .content_item .team {
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.main .content .content_item .team .team_item {
+  height: 100%;
+  width: calc(100%/2.1);
+  min-width: calc(100%/2.1);
+  max-width: calc(100%/2.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main .content .content_item .team .team_item .image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main .content .content_item .Suitable {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .content .content_item .Suitable .Suitable_intro {
+  width: 100%;
+  display: flex;
+  line-height: 52rpx;
+}
+
+.main .content .content_item .Suitable .Suitable_intro text:nth-of-type(1) {
+  font-size: 32rpx;
+  margin: 6rpx;
+}
+
+.main .content .content_item .Suitable .Suitable_intro .iconfont {
+  color: #059d77;
+  display: flex;
+  padding-top: 6rpx;
+  padding-right: 6rpx;
+}
+
+.main .content .content_item .outline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main .content .content_item .outline .line {
+  display: block;
+  width: 4rpx;
+  height: 90%;
+  position: absolute;
+  left: 172rpx;
+  top: 40rpx;
+  background-color: #ccc;
+}
+
+.main .content .content_item .outline .outline_item {
+  display: flex;
+  width: 60%;
+  height: 120rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main .content .content_item .outline .outline_item .outline_item_left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .content .content_item .outline .outline_item .outline_item_left .iconfont {
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 40rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #059d77;
+  color: white;
+}
+
+.main .content .content_item .outline .outline_item .outline_item_intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .content .content_item .outline .outline_item .outline_item_intro text:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.main .content .content_item .research {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.main .content .content_item .research .research_swiper {
+  width: 100%;
+}
+
+.main .content .content_item .research .research_swiper .content_item_content_item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccf8ea;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+  height: auto;
+}
+
+.main .content .content_item .research .research_swiper .content_item_content_item text:nth-of-type(1) {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.main .content .content_item .research .research_swiper .content_item_content_item text:nth-of-type(2) {
+  line-height: 3 4rpx;
+  line-height: 70rpx;
+  box-sizing: border-box;
+}

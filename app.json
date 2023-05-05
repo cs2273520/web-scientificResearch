@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/course/course",
+        "pages/index_scroll/index_scroll",
+        "pages/courseDetail/courseDetail",
+        "pages/courseCategory/courseCategory",
+    
+        "pages/index_final/index_final",
+        "pages/center/center",
+        "pages/index_copy/index_copy",
+        "pages/index/index",
+        "pages/projectDetails/projectDetails",
+        "pages/consultation/consultation"
+      
+    ],
+    "tabBar": {
+        "selectedColor": "#005826",
+        "list": [
+            {
+                "pagePath":"pages/index_scroll/index_scroll",
+                "iconPath": "/image/tabbar/index.png",
+                "selectedIconPath": "/image/tabbar/index_s.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/course/course",
+                "iconPath": "/image/tabbar/course.png",
+                "selectedIconPath": "/image/tabbar/course_s.png",
+                "text": "课程"
+            },
+            {
+                "pagePath": "pages/center/center",
+                "iconPath": "/image/tabbar/center.png",
+                "selectedIconPath": "/image/tabbar/center_s.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "纪元实验室",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "default"
+    },
+    "networkTimeout": {
+        "downloadFile": 10000
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "sitemapLocation": "sitemap.json"
+}

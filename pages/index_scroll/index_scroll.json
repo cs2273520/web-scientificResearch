@@ -1,0 +1,6 @@
+{
+ 
+    "usingComponents": {
+        "customerService":"/component/customerService/customerService"
+    }
+}

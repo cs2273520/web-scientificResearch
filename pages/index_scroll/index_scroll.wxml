@@ -1,0 +1,98 @@
+<view class="main">
+    <swiper vertical class="swiper-container">
+        <swiper-item class="top">
+            <!-- <view class="choose">
+                <view wx:for="{{category1}}" wx:key="index" bindtap="choosePro" data-choose="{{index}}" class="{{index==top_currentPage?'choose_active':''}}">
+                    {{item.proName}}
+                </view>
+            </view> -->
+            <swiper class="swiper_top" current="{{top_currentPage}}" bindchange="choosePro1">
+                <swiper-item wx:for="{{category1}}" wx:key="index">
+                    <image src="https://www.eralab.cn/static/bg{{index+1}}.svg" mode="widthFix" />
+                </swiper-item>
+            </swiper>
+        </swiper-item>
+        <swiper-item class="content">
+            <view class="choose">
+                <view wx:for="{{category1}}" wx:key="index" bindtap="choosePro" data-choose="{{index}}" class="{{index==top_currentPage?'choose_active':''}}">
+                    {{item.proName}}
+                </view>
+            </view>
+            <swiper bindchange="bottomSwiperChange" current="{{top_currentPage}}" class="bottomSwiperChange">
+                <block wx:for="{{category1}}" wx:key="index">
+                    <swiper-item>
+                        <scroll-view scroll-y="true"  class="content_center" >
+                            <block wx:for="{{item.pages}}" wx:key="index">
+                                <view class="content_item">
+                                    <view class="content_item_title">
+                                        <view class="content_item_title_left">
+                                            0{{index+1}}
+                                        </view>
+                                        <view class="content_item_title_right">
+                                            <text>{{item.proName[0]}}</text>
+                                            <text>{{item.proName[1]}}</text>
+                                        </view>
+                                    </view>
+                                    <view class="introduce" wx:if="{{item.proIntroduce}}">
+                                        <block wx:for="{{item.proIntroduce}}" wx:key="index">
+                                            <view class="content_item_content_item">
+                                                {{item}}
+                                            </view>
+                                        </block>
+                                        <view class="introduce_item">
+                                            <view wx:for="{{category1[top_currentPage].pages[0].pro_item}}" wx:key="index" class="introduce_item_s">
+                                                <view class="iconfont {{item.iconfont}}" style="background-color : {{item.color}};">
+                                                    
+                                                </view>
+                                                <view class="introduce_item_tright">
+                                                    <text>{{item.t1}}</text>
+                                                <text>{{item.t2}}
+                                                </text>
+                                                </view>
+                                             
+                                            </view>
+                                        </view>
+
+                                    </view>
+                                    <view class="harvest" wx:if="{{item.harvest}}">
+                                        <block wx:for="{{item.harvest}}" wx:key="index">
+                                            <view class="harvest_item">
+                                                <view style="color: {{item.color}};" class="iconfont {{item.iconfont}}">
+
+                                                </view>
+                                                <view class="harvest_item_line">
+                                                    
+                                                </view>
+                                                <view class="harvest_item_intro">
+                                                    <text>{{item.content}}</text>
+                                                    <text>{{item.other}}</text>
+                                                </view>
+                                            </view>
+                                      
+                                        </block>
+
+                                    </view>
+                                    <view class="period" wx:if="{{item.proPeriod}}">
+                                    <view class="image">
+                                        <image src="https://www.eralab.cn/static/period{{top_currentPage+1}}.svg" mode="widthFix"/>
+                                    </view>
+                                    
+                                    </view>
+                                    
+
+                                    <view>
+                                    </view>
+                                </view>
+                               
+                            </block>
+                        </scroll-view>
+                         
+                    </swiper-item>
+                </block>
+
+            </swiper>
+        </swiper-item>
+
+    </swiper>
+    <!-- <customerService></customerService> -->
+</view>

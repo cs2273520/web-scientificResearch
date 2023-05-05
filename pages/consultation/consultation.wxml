@@ -1,0 +1,93 @@
+<view class="main">
+    <view class="top">
+        我是广告图
+    </view>
+    <view class="content">
+        <view class="content_item">
+            <view class="content_item_top">
+                <view class="iconfont icon-erweima">
+                    
+                </view>
+                <view class="content_item_top_right">
+                <view class="content_item_top_right_top">
+                    <view>
+                    关注纪元科研lab
+                </view>
+                <view>
+                    定位信息时代最准确的教育信息
+                </view>   
+                </view>
+                <view class="content_item_top_right_bottom">
+                    <view class="copy">
+                        <view class="copy_left">
+                            xcf123456
+                        </view>
+                        <view class="copy_right">
+                            复制
+                        </view>
+                    </view>
+                </view>
+               
+                </view>
+            </view>
+            <view class="content_item_center">
+            <view class="content_item_center_item">
+                ·与全球顶尖高校学霸共学习
+            </view>
+            <view class="content_item_center_item">
+                ·与精英国际学校家长共成长
+            </view>
+            <view class="content_item_center_item">
+                ·国际教学前沿信息一手掌握
+            </view>
+            <view class="content_item_center_item">
+                ·干货知识技能资料免费领取
+            </view>
+            </view>
+        </view>
+
+        <view class="content_item">
+            <view class="content_item_top">
+                <view class="iconfont icon-erweima">
+                    
+                </view>
+                <view class="content_item_top_right">
+                <view class="content_item_top_right_top">
+                    <view>
+                    关注纪元科研lab
+                </view>
+                <view>
+                    定位信息时代最准确的教育信息
+                </view>   
+                </view>
+                <view class="content_item_top_right_bottom">
+                    <view class="copy">
+                        <view class="copy_left">
+                            xcf123456
+                        </view>
+                        <view class="copy_right">
+                            复制
+                        </view>
+                    </view>
+                </view>
+               
+                </view>
+            </view>
+            <view class="content_item_center">
+            <view class="content_item_center_item">
+                ·与全球顶尖高校学霸共学习
+            </view>
+            <view class="content_item_center_item">
+                ·与精英国际学校家长共成长
+            </view>
+            <view class="content_item_center_item">
+                ·国际教学前沿信息一手掌握
+            </view>
+            <view class="content_item_center_item">
+                ·干货知识技能资料免费领取
+            </view>
+            </view>
+        </view>
+
+    </view>
+</view>

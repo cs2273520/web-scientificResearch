@@ -1,0 +1,90 @@
+<view class="main">
+    <swiper vertical="{{true}}" class="swiper_all" 
+    bindchange="swiperChangeAll" current="{{UpandDown}}">
+    <view class="topTitle">
+                <block wx:for="{{category0}}" wx:key="index">
+                    <view class="topTitle_item {{leftAndright==index?'topTitle_item_active':''}}" data-choose="{{index}}" bindtap="topChoose">
+                        {{item}}
+                      <view class="line">
+                          
+                      </view>
+                    </view>
+                </block>
+    </view>
+        <swiper-item class="top">
+           
+        <view class="Down">
+           <view class="iconfont icon-xiangxiagengduo">
+               
+           </view>
+        </view>
+            <swiper class="swiper1" current="{{leftAndright}}" bindchange="swiperChangeLR">
+                <block wx:for="{{category0}}" wx:key="index">
+                    <swiper-item>
+                        <image src="https://www.eralab.cn/static/{{currentType}}.svg" mode="widthFix" bindload="imgLoad" />
+                        <view class="toBottom" bindtap="toBottom">
+                            {{imgUrl}}
+                            <text>了解详情</text>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+
+        </swiper-item>
+        <swiper-item class="content">
+            <view class="content_title">
+                <view class="content_title_cneter">
+                    <block wx:for="{{category0}}" wx:key="index">
+                        <view class="content_title_cneter_item {{index==leftAndright?'content_title_cneter_active':''}}">
+                            <text bindtap="bottomChoose" data-choose="{{index}}">{{item}}</text>
+                        </view>
+                    </block>
+
+
+                </view>
+                <view class="content_title_courseNum">
+                    <view>
+                        共<text>{{course.length}}</text> 个课程
+                    </view>
+                    <view>
+                        全部类型
+                    </view>
+                </view>
+            </view>
+            <swiper class="swiper2" current="{{leftAndright}}" horizontal="{{true}}" bindchange="swiperChangeLR">
+                <block wx:for="{{category0}}" wx:key="index">
+                    <swiper-item>
+                    <scroll-view scroll-y="true" class="swiper2_scroll">
+                        <view class="content_center" wx:for="{{course}}" wx:key="index">
+                            <view class="content_item_content" bindtap="toCourseDetail" data-id="{{item.id}}">
+                                <view class="content_item_content_bg">
+                                    <image src="https://www.eralab.cn/static/{{currentType}}_s.svg" mode="widthFix" />
+                                </view>
+
+                                <view class="content_item_content_top">
+                                    <view class="content_item_content_top_content">
+                                        <text> {{item.courseCnName}}</text>
+                                        <text> {{item.courseEnName}}</text>
+
+                                    </view>
+                                    <view class="content_item_content_top_bottom">
+
+                                        <view>
+                                            导师院校:{{item.school}}
+                                        </view>
+                                        <view>
+                                            专家企业: {{item.enterprise}}
+                                        </view>
+                                    </view>
+                                </view>
+
+                            </view>
+                        </view>
+                    </scroll-view>
+                       
+                    </swiper-item>
+                </block>
+            </swiper>
+        </swiper-item>
+    </swiper>
+</view>

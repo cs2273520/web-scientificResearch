@@ -1,0 +1,205 @@
+<view class="main">
+    <view class="top" id="top">
+        <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view wx:for="{{category1}}" wx:key="index" class="card-box" id="card_{{index}}">
+                <view class="card">
+                    <view class="card_top">
+                        <view>{{item.proName}}</view>
+                        <view class="course_intro">
+                            銥计划基础版
+                        </view>
+                        <view class="toDetail">
+                            <text bindtap="scrollTo">了解详情</text>
+                            <view class="iconfont icon-xiangyou1">
+
+                            </view>
+                        </view>
+                    </view>
+                    <view class="card_bottom">
+                        <view class="iconfont icon-icon-angle-double-bottom">
+
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="top_title {{isFixed?'top_title_fixed':''}}">
+            <block wx:for="{{category1}}" wx:key="index">
+                <view class="top_title_item {{index==currentView?'top_title_active':''}}" bindtap="toTitleItem" data-toTitleItem="{{index}}">
+                    <text>{{item.proName}}</text>
+                </view>
+            </block>
+        </view>
+
+    </view>
+    <view class="content">
+        <scroll-view class="scroll-box" scroll-y scroll-with-animation scroll-into-view="{{toPage}}" bindtouchstart="touchStart1" bindtouchend="touchEnd1">
+      
+            <view wx:for="{{category1[0].pages}}" wx:key="index" class="content_center" id="card_{{index}}">
+                <view class="content_center_item" wx:if="{{index==0}}">
+                    <view class="content_center_item_title">
+                        <view class="content_center_item_title_left">
+                            0{{index+1}}
+                        </view>
+                        <view class="content_center_item_title_right">
+                            <text>项目介绍</text>
+                            <text>Project introduction</text>
+                        </view>
+                    </view>
+                    <view class="content_center__item_content">
+                    <block wx:for="{{category1[0].pages[0].proIntroduce}}" wx:key="index">
+                        <view class="content_center__item_content_left">
+                            {{item}}
+                        </view>  
+                    </block>
+                       
+                    </view>
+                </view>
+
+                <view class="content_center_item" wx:if="{{index==1}}">
+                    <view class="content_center_item_title">
+                        <view class="content_center_item_title_left">
+                            0{{index+1}}
+                        </view>
+                        <view class="content_center_item_title_right">
+                            <text>项目介绍</text>
+                            <text>Project introduction</text>
+                        </view>
+                    </view>
+                    <view class="content_center__item_content">
+                    <block wx:for="{{category1[0].pages[0].proIntroduce}}" wx:key="index">
+                        <view class="content_center__item_content_left">
+                            {{item}}
+                        </view>  
+                    </block>
+                       
+                    </view>
+                </view>
+                <view class="content_center_item" wx:if="{{index==2}}">
+                    <view class="content_center_item_title">
+                        <view class="content_center_item_title_left">
+                            0{{index+1}}
+                        </view>
+                        <view class="content_center_item_title_right">
+                            <text>项目介绍</text>
+                            <text>Project introduction</text>
+                        </view>
+                    </view>
+                    <view class="content_center__item_content">
+                    <block wx:for="{{category1[0].pages[0].proIntroduce}}" wx:key="index">
+                        <view class="content_center__item_content_left">
+                            {{item}}
+                        </view>  
+                    </block>
+                       
+                    </view>
+                </view>
+
+
+
+                
+                <view class="card_bottom">
+                        <view class="iconfont icon-icon-angle-double-bottom">
+
+                        </view>
+                    </view>
+            </view>
+   
+       
+
+            <view class="content_center harvest">
+                <view class="content_center_item">
+                    <view class="content_center_item_title">
+                        <view class="content_center_item_title_left">
+                            02
+                        </view>
+                        <view class="content_center_item_title_right">
+                            <text>项目收获</text>
+                            <text>Project introduction</text>
+                        </view>
+                    </view>
+                    <view class="content_center__item_content">
+                      
+                       <block wx:for="{{category1[0].pages[1].harvest}}" wx:key="index">
+                        <view class="content_center__item_content_havest_item">
+                           <view class="iconfont icon-duigoux">
+                               
+                           </view>
+                           <view>
+                               {{item}}
+                           </view>
+                       </view>
+                       </block>
+                   
+                    </view>
+                </view>
+                <view class="card_bottom">
+                        <view class="iconfont icon-icon-angle-double-bottom">
+
+                        </view>
+                    </view>
+            </view>
+            <view class="content_center period">
+                <view class="content_center_item">
+                    <view class="content_center_item_title">
+                        <view class="content_center_item_title_left">
+                            03
+                        </view>
+                        <view class="content_center_item_title_right">
+                            <text>项目周期</text>
+                            <text>Project introduction</text>
+                        </view>
+                    </view>
+                    <view class="content_center__item_content">
+                       <view class="content_center__item_content_title">
+                           整体项目时长:16周
+                       </view>
+                       <view class="content_center__item_content_content">
+                          <view class="content_center__item_content_content_title">
+                              做研究:12周
+                          </view> 
+                          <view class="content_center__item_content_content_item">
+                           <view class="iconfont icon-fenxiangxiao">
+                               
+                           </view>  <text> xxxxxxxx</text>
+                          </view>
+                          <view class="content_center__item_content_content_item">
+                            <view class="iconfont icon-fenxiangxiao">
+                               
+                            </view>   <text> xxxxxxxx</text>
+                          </view>
+                          <view class="content_center__item_content_content_item">
+                            <view class="iconfont icon-fenxiangxiao">
+                               
+                            </view> <text> xxxxxxxx</text>
+                          </view>
+                          <view class="content_center__item_content_content_item">
+                            <view class="iconfont icon-fenxiangxiao">
+                               
+                            </view>  <text> xxxxxxxx</text>
+                          </view>
+                       </view>
+                       <view class="content_center__item_content_content">
+                          <view class="content_center__item_content_content_title">
+                              写文章:4周
+                          </view> 
+                          <view class="content_center__item_content_content_item">
+                            <view class="iconfont icon-fenxiangxiao">
+                               
+                            </view>  <text> xxxxxxxx</text>
+                          </view>
+                       </view>
+                    </view>
+                </view>
+                <view class="card_bottom">
+                        <view class="iconfont icon-icon-angle-double-bottom">
+
+                        </view>
+                    </view>
+            </view>
+
+
+        </scroll-view>
+
+    </view>
+</view>

@@ -1,0 +1,266 @@
+<view class="main">
+    <view class="top">
+        <view class="top_content">
+            <view class="iconfont icon-sousuo">
+
+            </view>
+            <input type="text" placeholder="顶级科研计划" />
+        </view>
+    </view>
+    <view class="content_swiper">
+        <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" list="{{swiperList}}" navigation="{{ { type: 'dots-bar' } }}" next-margin="20" previous-margin="20" />
+    </view>
+
+
+    <view class="content_join">
+        <button class="content_join_center" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">
+            立即加入
+        </button>
+    </view>
+
+    <view class="content">
+        <view class="content_item" bindtap="toProjectDetails">
+            <view class="content_item_title">
+                <text>A项目</text>
+                <!-- <text>在家跟老师做项目</text> -->
+            </view>
+            <view class="content_item_content">
+                <view class="content_item_content_top">
+                    <image src="/image/index/bg.jpg" mode="" />
+                    <view class="content_item_content_top_title">
+                        <!-- <text>适合：大学生</text>   -->
+                    </view>
+                    <view class="content_item_content_top_content">
+                        市场营销：打造品牌战略优势
+                    </view>
+                    <view class="content_item_content_top_bottom">
+
+                        <view>
+                            了解详情 >
+                        </view>
+                    </view>
+                </view>
+                <view class="content_item_content_bottom">
+                    <view class="content_item_content_bottom_content">
+                        “拥有市场比拥有工厂更为重要，而拥有市场的唯一
+                        手段是拥有占统治地位的品牌”。当今，市场.上可供选择的商品和服务种类越来越富新媒体屏出不穷商业发 属步伐疯犴消 费者的”
+                    </view>
+
+                </view>
+
+            </view>
+
+
+        </view>
+        <view class="content_item" bindtap="toProjectDetails">
+            <view class="content_item_title">
+                <text>B项目</text>
+                <!-- <text>在家跟老师做项目</text> -->
+            </view>
+            <view class="content_item_content">
+                <view class="content_item_content_top">
+                    <image src="/image/index/bg.jpg" mode="" />
+                    <view class="content_item_content_top_title">
+                        <!-- <text>适合：大学生</text>   -->
+                    </view>
+                    <view class="content_item_content_top_content">
+                        市场营销：打造品牌战略优势
+                    </view>
+                    <view class="content_item_content_top_bottom">
+
+                        <view>
+                            了解详情 >
+                        </view>
+                    </view>
+                </view>
+                <view class="content_item_content_bottom">
+                    <view class="content_item_content_bottom_content">
+                        “拥有市场比拥有工厂更为重要，而拥有市场的唯一
+                        手段是拥有占统治地位的品牌”。当今，市场.上可供选择的商品和服务种类越来越富新媒体屏出不穷商业发 属步伐疯犴消 费者的”
+                    </view>
+
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="advantage">
+    <view class="advantage_center">
+        <view class="advantage_title">
+            我们的优势
+        </view>
+        
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+    </view>
+     
+    </view>
+    <view class="advantage choose">
+    <view class="advantage_center">
+        <view class="advantage_title">
+            选择我们你将获得
+        </view>
+        
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+        <view class="advantage_item">
+            <view class="iconfont icon-handoup">
+      
+            </view>
+            <view>
+                xxxxxxxxxx
+            </view>
+        </view>
+    </view>
+     
+    </view>
+    <view class="teacher">
+    <view class="teacher_center">
+        <view class="teacher_title">
+            教师团队
+        </view>
+        <view class="teacher_content">
+            <view class="teacher_content_item">
+                <view class="iconfont icon-wode">
+                    
+                </view>
+                <view>
+                    xxx大学xxx教授
+                </view>
+            </view>
+            <view class="teacher_content_item">
+                <view class="iconfont icon-wode">
+                    
+                </view>
+                <view>
+                    xxx大学xxx教授
+                </view>
+            </view>
+            <view class="teacher_content_item">
+                <view class="iconfont icon-wode">
+                    
+                </view>
+                <view>
+                    xxx大学xxx教授
+                </view>
+            </view>
+            <view class="teacher_content_item">
+                <view class="iconfont icon-wode">
+                    
+                </view>
+                <view>
+                    xxx大学xxx教授
+                </view>
+            </view>
+            <view class="teacher_content_item">
+                <view class="iconfont icon-wode">
+                    
+                </view>
+                <view>
+                    xxx大学xxx教授
+                </view>
+            </view>
+        </view>
+    </view>
+       
+    </view>
+    <view class="trainee">
+        <view class="trainee_title">
+            学员故事
+        </view>
+        <view class="trainee_content">
+            <view class="trainee_content_top">
+                <view class="iconfont icon-wode"></view>
+                <view class="trainee_content_top_intro">
+                在这个项目中，我的收获是是我的收获是是xxxxxxxxxxx
+                </view>
+            </view>
+            <view class="trainee_content_bottom">
+                <view class="trainee_content_bottom_item">
+                    参与项目:A项目
+                </view>
+                <view class="trainee_content_bottom_item">
+                    课程:计算机编程
+                </view>
+                <view class="trainee_content_bottom_item">
+                    学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记
+                </view>
+                <view class="trainee_content_bottom_item">
+                    点击了解详情
+                </view>
+            </view>
+        </view>
+        <view class="trainee_content">
+            <view class="trainee_content_top">
+                <view class="iconfont icon-wode"></view>
+                <view class="trainee_content_top_intro">
+                在这个项目中，我的收获是是我的收获是是xxxxxxxxxxx
+                </view>
+            </view>
+            <view class="trainee_content_bottom">
+                <view class="trainee_content_bottom_item">
+                    参与项目:A项目
+                </view>
+                <view class="trainee_content_bottom_item">
+                    课程:计算机编程
+                </view>
+                <view class="trainee_content_bottom_item">
+                    学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记学习过程日记
+                </view>
+                <view class="trainee_content_bottom_item">
+                    点击了解详情
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="about">
+        <view class="about_title">
+            有关我们
+        </view>
+        <view class="about_logo">
+            <image src="/image/index/logo.jpg" mode=""/>
+        </view>
+        <view class="about_intro">
+            公司简介:我们是我们是我们是我们是我们是我们是我们是我们是我们是
+        </view>
+    </view>
+
+    <customerService></customerService>
+
+</view>

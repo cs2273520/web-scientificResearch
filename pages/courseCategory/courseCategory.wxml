@@ -1,0 +1,73 @@
+<view class="main">
+    <scroll-view class="top" id="top">
+        <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view wx:for="{{category0}}" wx:key="index" class="card-box" id="card_{{index}}">
+                <view class="card">
+                    <image src="https://www.eralab.cn/static/static/{{category0[currentView]}}.svg" bindload="onImageLoad" class="card_bg" mode="aspectFill"/>
+                    <view class="card_top">
+                        <view>{{item}}</view>
+                        <view class="toDetail">
+                            <view class="toDetail_button" bindtap="scrollTo">
+                                了解详情
+                            </view>
+                        </view>
+                    </view>
+                    <view class="card_bottom">
+                        <view class="iconfont icon-xiangxiagengduo">
+
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="top_title {{isFixed?'top_title_fixed':''}}" wx:if="{{isFixed}}">
+            <block wx:for="{{category0}}" wx:key="index">
+                <view class="top_title_item {{index==currentView?'top_title_active':''}}" bindtap="toTitleItem" data-toTitleItem="{{index}}">
+                    <text>{{item}}</text>
+                </view>
+            </block>
+        </view>
+
+    </scroll-view>
+    <view class="content {{isFixed?'content_fixed':''}}">
+        <view class="content_top {{isFixed?'content_top_active':''}}">
+            <view class="content_top_title">
+            </view>
+
+            <view class="content_top_content">
+                <view class="allNum">
+                    共{{course.length}}个课程
+                </view>
+                <view class="allType">
+                    全部类型
+                </view>
+            </view>
+        </view>
+        <view class="content_center" wx:for="{{course}}" wx:key="index">
+            <view class="content_item_content" bindtap="toCourseDetail" data-id="{{item.id}}">
+                <view class="content_item_content_bg">
+                    <image src="https://www.eralab.cn/static/{{category0[currentView]}}_s.svg" mode="widthFix"/>
+                </view>
+
+                <view class="content_item_content_top">
+                    <view class="content_item_content_top_content">
+                        <text> {{item.courseCnName}}</text>
+                        <text> {{item.courseEnName}}</text>
+
+                    </view>
+                    <view class="content_item_content_top_bottom">
+
+                        <view>
+                            导师院校:{{item.school}}
+                        </view>
+                        <view>
+                            专家企业: {{item.enterprise}}
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+
+    </view>
+</view>

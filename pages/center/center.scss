@@ -1,0 +1,108 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+    .top{
+        width: 100%;
+        height: 160rpx;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 40rpx;
+        box-sizing: border-box;
+        .icon-wode{
+            width: 94rpx;
+            height: 94rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ccc;
+            border-radius: 50%;
+            font-size: 84rpx;
+            color: white;
+        }
+        .Login{
+            font-size: 40rpx;
+            font-weight: bold;
+            margin-left: 20rpx;
+            button::after { border: none; }
+            .loginButton{
+                background-color: white;
+            }
+         
+            .logOut{
+                font-size: 32rpx;
+                color: #005826;
+            }
+        }
+    }
+    .advertisement{
+        width: 100%;
+        height: 200rpx;
+        background: linear-gradient(2deg,#fdd819,#e80505);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 64rpx;
+    }
+    .recommend{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 40rpx;
+        box-sizing: border-box;
+        background-color: white;
+        .recommend_item{
+            display: flex;
+            justify-content: space-between;
+            height: 110rpx;
+            align-items: center;
+            box-sizing: border-box;
+            font-size: 28rpx;
+        }
+        .recommend_item:nth-of-type(1){
+            border-bottom: 2rpx solid #ccc;
+        }
+    }
+    .service{
+        margin-top: 20rpx;
+        width: 100%;
+        background-color: white;
+        height: 100rpx;
+        padding: 0 40rpx;
+        box-sizing: border-box;
+        display: flex;
+        font-size: 28rpx;
+        align-items: center;
+        justify-content: space-between;
+        view:nth-of-type(2){
+            color: #b2b2b2;
+        }
+    }
+    .match{
+        margin-top: 20rpx;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        .match_top{
+            width: 100%;
+            height: 220rpx;
+            background: linear-gradient(2deg,#ffa8a8,#fcff00);
+        }
+        .match_content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3f5cd4;
+            font-size: 32rpx;
+            font-weight: bold;
+            padding: 30rpx 0;
+            box-sizing: border-box;
+        }
+    }
+}

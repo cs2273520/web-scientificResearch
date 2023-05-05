@@ -1,0 +1,37 @@
+<view class="main">
+    <scroll-view class="content" scroll-y scroll-with-animation
+  scroll-into-view="{{toView}}" bindtouchstart="touchStart"
+  bindtouchend="touchEnd">
+
+        <view class="content_item first_item" wx:for="{{weekNum}}" wx:key="index" id="card_{{index}}">
+            <view class="content_item_title" style="background-color:{{colorArr[index]}}">
+                第{{item.num}}周
+              {{item.title}}
+            </view>
+            <view class="iconfont icon-handoup">
+                
+            </view>
+            <view class="content_item_content" wx:if="{{item.intro!=''}}">
+                {{item.intro}}
+            </view>
+            <view class="content_item_content" wx:if="{{item.intro==''}}">
+            恭喜您，已经完成所有课程了!
+            </view>
+            <view class="iconfont icon-handoup">
+                
+            </view>
+            <view class="content_item_title" wx:if="{{index!=weekNum.length-1}}" style="background-color:{{colorArr[index+1]}}">
+                第{{weekNum[index+1].num}}周
+                开题汇报
+            </view>
+            <view class="content_item_title " wx:if="{{index==weekNum.length-1}}" style="background-color:{{colorArr[index]}}">
+                end
+            </view>
+        </view> 
+        
+
+      
+     
+        
+    </scroll-view>
+</view>
